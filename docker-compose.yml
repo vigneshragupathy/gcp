@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  nodejssampleapp1:
+    image: nodejssampleapp1
+    build:
+      context: nodejs_sample_app1
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080

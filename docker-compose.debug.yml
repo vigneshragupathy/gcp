@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  nodejssampleapp1:
+    image: nodejssampleapp1
+    build:
+      context: nodejs_sample_app1
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:8080
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "index.js"]
